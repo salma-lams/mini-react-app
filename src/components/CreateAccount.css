@@ -1,0 +1,59 @@
+/* Container styles */
+.create-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #6a0dad, #9c27b0);
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.create-account-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title */
+.create-account-form h2 {
+    margin-bottom: 20px;
+    color: #6a0dad;
+}
+
+/* Input Fields */
+.create-account-form input,
+.create-account-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button */
+.create-account-form button {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.create-account-form button:hover {
+    background-color: #520a7a;
+}
+
+/* Error List */
+.error-list {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}

@@ -1,0 +1,75 @@
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #5e0094, #a700d1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #5e0094;
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5e0094;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .login-box button:hover {
+    background-color: #a700d1;
+    transition: 0.3s;
+  }
+  
+  .create-account-link {
+    margin-top: 15px;
+  }
+  
+  .create-account-link p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .create-account-link a {
+    color: #5e0094;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .create-account-link a:hover {
+    text-decoration: underline;
+  }
+  
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
