@@ -17,7 +17,12 @@ const HeaderSection = () => {
   if (!user) return null;
 
   return (
-    <header style={headerStyle}>
+    <header
+      style={{
+        ...headerStyle,
+        backgroundColor: user?.couleur || "#1e3a8a", // تحديث لون الـ Header بناءً على couleur
+      }}
+    >
       <img src={logo} alt="Logo" style={logoStyle} />
       <div style={userSectionStyle}>
         <span style={userTextStyle}>
@@ -37,14 +42,12 @@ const headerStyle = {
   justifyContent: "space-between",
   alignItems: "center",
   padding: "15px 30px",
-  backgroundColor: "#1e3a8a",
   color: "#fff",
   boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
 };
 
 const logoStyle = {
   height: "40px",
-  
 };
 
 const userSectionStyle = {

@@ -2,19 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
 const NavigationBar = () => {
   const user = useSelector((state) => state.user.user);
 
   return (
     <nav style={{ ...navStyle, backgroundColor: user?.couleur || "#f8f9fa" }}>
-      <Link style={linkStyle} to="/home">Accueil</Link>
-      <Link style={linkStyle} to="/profile">Mon Profil</Link>
-          <Link style={linkStyle} to="/add-request">Ajouter demande</Link>
-          {user?.admin && (
+      <Link style={linkStyle} className="nav-link" to="/home">Accueil</Link>
+      <Link style={linkStyle} className="nav-link" to="/profile">Mon Profil</Link>
+      <Link style={linkStyle} className="nav-link" to="/add-request">Ajouter demande</Link>
+      {user?.admin && (
         <>
-          <Link style={linkStyle} to="/requests">Liste des demandes</Link>
-          <Link style={linkStyle} to="/add-user">Ajouter utilisateur</Link>
-          <Link style={linkStyle} to="/users">Liste des utilisateurs</Link>
+          <Link style={linkStyle} className="nav-link" to="/requests">Liste des demandes</Link>
+          <Link style={linkStyle} className="nav-link" to="/add-user">Ajouter utilisateur</Link>
+          <Link style={linkStyle} className="nav-link" to="/users">Liste des utilisateurs</Link>
         </>
       )}
     </nav>
@@ -23,24 +24,23 @@ const NavigationBar = () => {
 
 const navStyle = {
   display: "flex",
-  justifyContent: "space-around",
+  justifyContent: "space-evenly",
   alignItems: "center",
-  padding: "15px",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+  padding: "15px 20px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+ 
 };
 
 const linkStyle = {
   textDecoration: "none",
-  color: "#1e3a8a",
-  padding: "10px 15px",
+  color: "#ffffff",
+  padding: "12px 20px",
   fontSize: "16px",
   fontWeight: "bold",
-  borderRadius: "5px",
-  transition: "background-color 0.3s, color 0.3s",
-  backgroundColor: "#f1f5f9",
+  borderRadius: "20px",
   textAlign: "center",
-  whiteSpace: "nowrap",
   cursor: "pointer",
+  transition: "all 0.3s",
 };
 
 export default NavigationBar;
