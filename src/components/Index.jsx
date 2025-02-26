@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Index = () => {
-  const user = useSelector((state) => state.user.user);
+const Sidebar = () => {
+  const user = useSelector((state) => state.user?.user);
 
   return (
     <aside style={{ ...asideStyle, backgroundColor: user?.couleur || "#ffffff" }}>
@@ -27,7 +27,7 @@ const asideStyle = {
   alignItems: "center",
   gap: "15px",
   padding: "20px",
-  borderRadius: "8px",
+  borderRadius: "0px",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   width: "250px",
 };
@@ -41,10 +41,9 @@ const linkStyle = {
   borderRadius: "20px",
   textAlign: "center",
   width: "100%",
-  display: "block",
+  display: "inline-block",
   cursor: "pointer",
   transition: "all 0.3s",
 };
 
-
-export default Index;
+export default Sidebar;

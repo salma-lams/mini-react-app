@@ -20,7 +20,7 @@ const HeaderSection = () => {
     <header
       style={{
         ...headerStyle,
-        backgroundColor: user?.couleur || "#1e3a8a", // تحديث لون الـ Header بناءً على couleur
+        backgroundColor: user?.couleur || "#1e3a8a", 
       }}
     >
       <img src={logo} alt="Logo" style={logoStyle} />

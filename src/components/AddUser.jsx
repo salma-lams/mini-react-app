@@ -51,7 +51,7 @@ const AddUser = () => {
 
     const styles = {
         page: {
-            background: 'linear-gradient(135deg, #6a11cb, #2575fc)',
+            
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',

@@ -8,7 +8,7 @@ const Footer = () => {
     <footer
       style={{
         ...footerStyle,
-        backgroundColor: user?.couleur || "#1e293b", // تحديث لون الـ Footer بناءً على couleur
+        backgroundColor: user?.couleur || "#1e293b",
       }}
     >
       <p>© 2024 Mini Projet React</p>

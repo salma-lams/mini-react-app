@@ -6,7 +6,7 @@ const Home = () => {
 
     const styles = {
         page: {
-            background: "linear-gradient(135deg,rgb(179, 111, 224),rgba(31, 16, 245, 0.74))",
+           
             minHeight: "100vh",
             padding: "30px",
             fontFamily: "Arial, sans-serif",

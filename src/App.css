@@ -1,4 +1,4 @@
-/* Global Media Queries */
+/* 🌍 Global Media Queries */
 @media (max-width: 768px) {
   header, nav, footer {
     flex-direction: column;
@@ -37,10 +37,10 @@
   }
 }
 
-/* Additional App-wide Styling */
+/* 🌟 General App-wide Styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -53,13 +53,24 @@ a {
 button {
   cursor: pointer;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
+
+button:hover {
+  background-color: #2563eb;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 🧭 Navigation Links */
 .nav-link {
   background-color: transparent;
   transition: background-color 0.3s, transform 0.2s;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .nav-link:hover {
@@ -67,3 +78,6 @@ button {
   color: #ffffff; /* Ensure the text stays white */
   transform: scale(1.05); /* Slight zoom effect */
 }
+
+/* 🆗 Sidebar and Main Content Adjustments */
+aside 

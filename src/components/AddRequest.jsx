@@ -70,7 +70,7 @@ const AddRequest = ({ onRequestAdded }) => {
   
   const styles = {
     page: {
-      background: "linear-gradient(135deg, #4a90e2, #9013fe)",
+      
       height: "100vh",
       display: "flex",
       justifyContent: "center",

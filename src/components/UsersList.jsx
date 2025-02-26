@@ -3,7 +3,7 @@ import axios from "axios";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
-  const [editingUser, setEditingUser] = useState(null); // المستخدم الجاري تعديله
+  const [editingUser, setEditingUser] = useState(null); 
   const [editedData, setEditedData] = useState({
     nom: "",
     prenom: "",
@@ -39,7 +39,7 @@ const UsersList = () => {
 
   const handleEdit = (user) => {
     setEditingUser(user.id);
-    setEditedData(user); // تحميل البيانات الحالية للمستخدم
+    setEditedData(user); 
   };
 
   const handleInputChange = (e) => {
@@ -61,7 +61,7 @@ const UsersList = () => {
           user.id === editingUser ? { ...user, ...editedData } : user
         )
       );
-      setEditingUser(null); // إغلاق وضع التعديل
+      setEditingUser(null); 
       alert("Utilisateur modifié avec succès");
     } catch (err) {
       console.error("Erreur lors de la modification de l’utilisateur:", err);
@@ -70,7 +70,7 @@ const UsersList = () => {
 
   const styles = {
     page: {
-      background: "linear-gradient(135deg, #4a90e2, #9013fe)",
+     
       minHeight: "100vh",
       padding: "30px",
       fontFamily: "Arial, sans-serif",

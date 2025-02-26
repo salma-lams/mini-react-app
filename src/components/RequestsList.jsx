@@ -3,35 +3,35 @@ import axios from "axios";
 
 const RequestsList = () => {
   const [requests, setRequests] = useState([]);
-  const [loading, setLoading] = useState(true); // لإظهار مؤشر تحميل
-  const [error, setError] = useState(null); // لتخزين رسالة الخطأ
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
-  // جلب البيانات من الـ API
+ 
   useEffect(() => {
     const fetchRequests = async () => {
       try {
         const response = await axios.get(
           "https://670ed5b73e7151861655eaa3.mockapi.io/Stagiaire"
         );
-        setRequests(response.data); // تخزين البيانات
+        setRequests(response.data); 
       } catch (err) {
         console.error("Erreur lors de la récupération des demandes:", err);
-        setError("Une erreur s'est produite lors du chargement des données."); // رسالة خطأ
+        setError("Une erreur s'est produite lors du chargement des données."); 
       } finally {
-        setLoading(false); // إيقاف مؤشر التحميل
+        setLoading(false); 
       }
     };
     fetchRequests();
   }, []);
 
-  // تحديث حالة الطلب
+  
   const handleStatusChange = async (id, status) => {
     try {
       const response = await axios.put(
         `https://670ed5b73e7151861655eaa3.mockapi.io/Stagiaire/${id}`,
         { status }
       );
-      // تحديث البيانات محليًا
+      
       setRequests((prevRequests) =>
         prevRequests.map((request) =>
           request.id === id ? { ...request, ...response.data } : request
@@ -43,10 +43,10 @@ const RequestsList = () => {
     }
   };
 
-  // تصميم CSS
+  
   const styles = {
     page: {
-      background: "linear-gradient(135deg, #4a90e2, #9013fe)",
+      
       minHeight: "100vh",
       display: "flex",
       justifyContent: "center",
@@ -121,7 +121,7 @@ const RequestsList = () => {
     },
   };
 
-  // عرض مؤشر التحميل أثناء جلب البيانات
+  
   if (loading) {
     return (
       <div style={styles.page}>
@@ -132,7 +132,7 @@ const RequestsList = () => {
     );
   }
 
-  // عرض رسالة الخطأ في حال حدوث مشكلة
+  
   if (error) {
     return (
       <div style={styles.page}>

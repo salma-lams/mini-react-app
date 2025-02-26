@@ -16,7 +16,7 @@ const ContentSection = () => {
   }
 
   return (
-    <div style={contentSectionStyle}>
+    <div className="content-wrapper">
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
@@ -28,14 +28,6 @@ const ContentSection = () => {
       </Routes>
     </div>
   );
-};
-
-const contentSectionStyle = {
-  flex: 1,
-  padding: "20px",
-  backgroundColor: "#ffffff",
-  borderRadius: "8px",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
 };
 
 export default ContentSection;

@@ -8,30 +8,42 @@ import Index from "./Index";
 const Layout = () => {
   return (
     <div style={layoutStyle}>
+      {/* Header & Navigation */}
       <HeaderSection />
       <NavigationBar />
-      <div style={mainContentStyle}>
+
+      {/* Main Content */}
+      <div style={mainContainerStyle}>
+        {/* Sidebar */}
         <Index />
-        <ContentSection />
+
+        {/* Content Section */}
+        <div style={contentContainerStyle}>
+          <ContentSection />
+        </div>
       </div>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
+// Styles
 const layoutStyle = {
   display: "flex",
   flexDirection: "column",
-  height: "100vh",
-  backgroundColor: "#f9f9f9",
+  minHeight: "100vh",
 };
 
-const mainContentStyle = {
+const mainContainerStyle = {
   display: "flex",
-  flex: 1,
-  padding: "20px",
-  gap: "20px",
-  backgroundColor: "#eef2f7",
+  flexGrow: 1, 
 };
 
+const contentContainerStyle = {
+  flexGrow: 1, 
+  padding: "20px",
+  backgroundColor: "#f8f9fa",
+};
 export default Layout;

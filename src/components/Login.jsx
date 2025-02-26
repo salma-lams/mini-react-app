@@ -38,13 +38,13 @@ const Login = () => {
           couleur: user.couleur,
           pseudo: user.pseudo,
           avatar: user.avatar,
-          admin: user.admin, // التأكد من وجود الحقل admin
+          admin: user.admin, 
         };
 
-        dispatch(login(userData)); // تخزين بيانات المستخدم في Redux
+        dispatch(login(userData)); 
         setError("");
         alert("Connexion réussie!");
-        navigate("/profile"); // الانتقال إلى صفحة Profile
+        navigate("/profile"); 
       } else {
         setAttempts(attempts + 1);
         setError("Nom utilisateur ou mot de passe incorrect.");
